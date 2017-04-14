@@ -2,8 +2,8 @@
   "context-menu": {
     "atom-text-editor": [
       {
-        "label": "Toggle atom-upy",
-        "command": "atom-upy:toggle"
+        "label": "Connect atom-upy",
+        "command": "atom-upy:connect"
       }
     ]
   },
@@ -15,8 +15,8 @@
           "label": "atom-upy",
           "submenu": [
             {
-              "label": "Toggle",
-              "command": "atom-upy:toggle"
+              "label": "Connect",
+              "command": "atom-upy:connect"
             }
           ]
         }

@@ -3,10 +3,9 @@
   "main": "./lib/atom-upy",
   "version": "0.0.0",
   "description": "A short description of your package",
-  "keywords": [
-  ],
+  "keywords": [],
   "activationCommands": {
-    "atom-workspace": "atom-upy:toggle"
+    "atom-workspace": "atom-upy:connect"
   },
   "repository": "https://github.com/atom/atom-upy",
   "license": "MIT",
@@ -14,5 +13,10 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
+    "bluebird": "^3.5.0",
+    "serialport": "^4.0.7"
+  },
+  "devDependencies": {
+    "electron-rebuild": "^1.5.7"
   }
 }
