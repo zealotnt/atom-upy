@@ -29,3 +29,6 @@ class StatusListView extends SelectListView
     $$ ->
       @li =>
         @span path
+
+  confirmed: ({type, path}) ->
+    @cancel()
