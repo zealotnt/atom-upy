@@ -21,6 +21,14 @@
             {
               "label": "List file",
               "command": "atom-upy:list-file"
+            },
+            {
+              "label": "Write file",
+              "command": "atom-upy:write-file"
+            },
+            {
+              "label": "Remove file",
+              "command": "atom-upy:remove-file"
             }
           ]
         }

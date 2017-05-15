@@ -34,4 +34,4 @@ class StatusListView extends SelectListView
     @cancel()
     @upySerial.connect(path)
       .then () ->
-        atom.notifications.addSuccess "Connect #{ path } successfully"
+        atom.notifications.addSuccess "Connect \"#{ path }\" successfully"

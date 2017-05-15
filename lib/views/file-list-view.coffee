@@ -3,7 +3,7 @@ NewFileView = require './new-file-view'
 
 module.exports =
 class StatusListView extends SelectListView
-  initialize: (@data, @upySerial) ->
+  initialize: (@data, @action, @upySerial) ->
     super
     @show()
     @setItems @parseData @data
@@ -33,6 +33,12 @@ class StatusListView extends SelectListView
 
   confirmed: ({path}) ->
     @cancel()
-    @upySerial.upyReadFile(path)
-      .then (data) ->
-        newFileView = new NewFileView().createFile(path, data)
+    # This is a work around agains list file and remove file
+    if @action == "open"
+      @upySerial.upyReadFile(path)
+        .then (data) ->
+          newFileView = new NewFileView().createFile(path, data)
+    else if @action == "remove"
+      @upySerial.upyRemoveFile(path)
+        .then (fileName) ->
+          atom.notifications.addSuccess "Remove file \"#{ fileName }\" successfully"
