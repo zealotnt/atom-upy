@@ -1,5 +1,4 @@
 {$$, SelectListView} = require 'atom-space-pen-views'
-NewFileView = require './new-file-view'
 
 module.exports =
 class StatusListView extends SelectListView
@@ -15,7 +14,7 @@ class StatusListView extends SelectListView
 
   getFilterKey: -> 'path'
 
-  getEmptyMessage: -> "No file to show."
+  getEmptyMessage: -> 'No file to show.'
 
   show: ->
     @panel ?= atom.workspace.addModalPanel(item: this)
@@ -33,6 +32,6 @@ class StatusListView extends SelectListView
 
   confirmed: ({path}) ->
     @cancel()
-    @upySerial.upyReadFile(path)
-      .then (data) ->
-        newFileView = new NewFileView().createFile(path, data)
+    @upySerial.connect(path)
+      .then () ->
+        atom.notifications.addSuccess "Connect #{ path } successfully"

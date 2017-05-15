@@ -17,6 +17,10 @@
             {
               "label": "Connect",
               "command": "atom-upy:connect"
+            },
+            {
+              "label": "List file",
+              "command": "atom-upy:list-file"
             }
           ]
         }
