@@ -16,7 +16,9 @@
     "atom-select-list": "^0.2.0",
     "atom-space-pen-views": "^2.2.0",
     "bluebird": "^3.5.0",
-    "serialport": "^4.0.7"
+    "element-resize-detector": "^1.1.11",
+    "serialport": "^4.0.7",
+    "xterm": "^2.3.2"
   },
   "devDependencies": {
     "electron-rebuild": "^1.5.7"
